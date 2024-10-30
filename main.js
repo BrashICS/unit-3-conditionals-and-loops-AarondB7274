@@ -27,3 +27,5 @@ function round(value, decimals) {
 function randInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+// For "equal to" use == , for "and" use && , for  "or" use ||
