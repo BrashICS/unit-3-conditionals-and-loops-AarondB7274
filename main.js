@@ -87,10 +87,11 @@ function start_choice() {
     if(first_choice=4) {
         mountains()
         }
+    return
 }
 function forest() {
-    alert(`You head to the forest. The trees and undergrowth are blanketed in a thick layer of snow. Its all quite, until you hear erie giggling and sound of struggle in the distance.`)
-    let second_choice = Number(prompt(`Do you want to stand you ground (1), hide (2) or run (3)?`))
+    alert(`You head to the forest. The trees and undergrowth are blanketed in a thick layer of snow. Its all quite and you venture farthe in. After a while you hear erie giggling and soundss of struggle in the distance.`)
+    let second_choice = Number(prompt(`Do you want to stand your ground (1), hide (2) or run (3)?`))
     if (second_choice = 1) {
         forest_stand()
     }
@@ -100,22 +101,24 @@ function forest() {
     if (second_choice = 3) {
         forest_run()
     }
+    return
 }
 
 function forest_stand() {
         alert(`You stand your ground. The noises continue for quite some time, often punctuated with screams. A figure is launched above the canopy in the distance, and the forest goes silent as another follows.`)
-
+        return
 }
 
 function forest_hide() {
-        alert(`You hide in the under growth. The noises continue for quite some time, often punctuated with screams. The forest soon goes silent, and you come out from your hinding spot.`)
-    
+        alert(`You hide in the undergrowth. The noises continue for quite some time, often punctuated with screams. The forest soon goes silent, and you come out from your hinding spot.`)
+        return
 }
 
 function forest_run() {
         alert(`You run away. As you stumble over the snow covered roots and stones, a figure lands on a tree infront of you. You manage to let out a single, bone chilling scream before they lung at you, a mass of tatered wings and metal.`)
         alert(`The snow is stained black with your spilled oil, not the most pleasant end.`)
             forest()
+        return
 }
 
 function sea() {
