@@ -67,10 +67,9 @@ function user() {
 function start_game() {
     let user_name = prompt(`Hello there, what's you name?`)
     alert(`Welcome, ${user_name}, to a spooky (and *really* autistic) little game!`)
-    alert(`You find yourself in a familiar feild, only you don't seem to remember being here before and it's rather Halloween themed.
-    There's a pine forest to the east, a frozen sea to the south, a ruined city to the west and a grand mountian range to the north.
-    It's the middle of the night, the silver moons hang above and the icy wind wips around you and snow drifts down from the sky.`)
+    alert(`You find yourself in a familiar feild, only you don't seem to remember being here before and it's rather Halloween themed. There's a pine forest to the east, a frozen sea to the south, a ruined city to the west and a grand mountian range to the north. It's the middle of the night, the silver moons hang above the horizon and the icy wind whips around you as snow drifts down from the sky.`)
     start_choice()
+    return
 }
 
 function start_choice() {
@@ -90,7 +89,7 @@ function start_choice() {
     return
 }
 function forest() {
-    alert(`You head to the forest. The trees and undergrowth are blanketed in a thick layer of snow. Its all quite and you venture farthe in. After a while you hear erie giggling and soundss of struggle in the distance.`)
+    alert(`You head to the forest. The trees and undergrowth are blanketed in a thick layer of snow. Its all quite and you venture farther in, the snow crunching beneath your feet. After a while you hear erie giggling and soundss of struggle in the distance.`)
     let second_choice = Number(prompt(`Do you want to stand your ground (1), hide (2) or run (3)?`))
     if (second_choice = 1) {
         forest_stand()
@@ -110,19 +109,24 @@ function forest_stand() {
 }
 
 function forest_hide() {
-        alert(`You hide in the undergrowth. The noises continue for quite some time, often punctuated with screams. The forest soon goes silent, and you come out from your hinding spot.`)
+        alert(`You hide in the undergrowth. The noises continue for quite some time, often punctuated with screams. The forest soon goes silent but you stay hidden longer out of fear, when you come out the moons have falled behind the trees.`)
         return
 }
 
 function forest_run() {
         alert(`You run away. As you stumble over the snow covered roots and stones, a figure lands on a tree infront of you. You manage to let out a single, bone chilling scream before they lung at you, a mass of tatered wings and metal.`)
         alert(`The snow is stained black with your spilled oil, not the most pleasant end.`)
-            forest()
+        forest()
         return
 }
 
 function sea() {
+    alert(`You head to the seaside. The ice is perfectly smooth, a glassy mirror reflecting the moons from above. The shore is blanketed in snow, bordering the blue sea in white. It's calm here, a pair of figures dance in the sky over the frozen waters.`)
+    let second_choice = Number(prompt(`Do you want to stare out across the ice (1), watch the figures (2) or leave (3)?`))
+}
 
+function sea_stare() {
+    alert(`You stare out across the frozen sea. You stay for quite some time, when you rise the figures have gone and the moons have gone below the horizon.`)
 }
 
 function ruins() {
