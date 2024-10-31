@@ -2,4 +2,4 @@
 
 ## 3.4 - While
 
-![Coming Soon](../../images/cs.png)
+![Coming Soon](../images/cs.png)

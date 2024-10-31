@@ -2,4 +2,4 @@
 
 ## 3.3 - Else-If
 
-![Coming Soon](../../images/cs.png)
+![Coming Soon](../images/cs.png)
