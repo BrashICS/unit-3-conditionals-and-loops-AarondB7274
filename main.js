@@ -134,7 +134,7 @@ function sea() {
         sea_watch
     }
     if(second_choice = 3) {
-        leave
+        sea_leave
     }
     time = time + 1
     return time
@@ -152,7 +152,7 @@ function sea_watch() {
     return time
 }
 
-function leave() {
+function sea_leave() {
     alert(`You head back to the feild where you woke up. There wasn't anything that intrested you here anyways.`)
     time = time + 1
 }
