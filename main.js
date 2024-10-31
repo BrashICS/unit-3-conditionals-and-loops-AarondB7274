@@ -63,13 +63,13 @@ function user() {
         console.log(`Sorry, thats too few characters. No worries, string length can be difficult.`)
     }
 }
-
+let time = 0
 function start_game() {
     let user_name = prompt(`Hello there, what's you name?`)
     alert(`Welcome, ${user_name}, to a spooky (and *really* autistic) little game!`)
     alert(`You find yourself in a familiar feild, only you don't seem to remember being here before and it's rather Halloween themed. There's a pine forest to the east, a frozen sea to the south, a ruined city to the west and a grand mountian range to the north. It's the middle of the night, the silver moons hang above the horizon and the icy wind whips around you as snow drifts down from the sky.`)
     start_choice()
-    return
+    return time
 }
 
 function start_choice() {
@@ -86,7 +86,8 @@ function start_choice() {
     if(first_choice=4) {
         mountains()
         }
-    return
+    time = time + 1
+    return time
 }
 function forest() {
     alert(`You head to the forest. The trees and undergrowth are blanketed in a thick layer of snow. Its all quite and you venture farther in, the snow crunching beneath your feet. After a while you hear erie giggling and soundss of struggle in the distance.`)
@@ -100,33 +101,60 @@ function forest() {
     if (second_choice = 3) {
         forest_run()
     }
+    time = time + 1
     return
 }
 
 function forest_stand() {
         alert(`You stand your ground. The noises continue for quite some time, often punctuated with screams. A figure is launched above the canopy in the distance, and the forest goes silent as another follows.`)
-        return
+        time = time + 1
+        return time
 }
 
 function forest_hide() {
         alert(`You hide in the undergrowth. The noises continue for quite some time, often punctuated with screams. The forest soon goes silent but you stay hidden longer out of fear, when you come out the moons have falled behind the trees.`)
-        return
+        time = time + 2
+        return time
 }
 
 function forest_run() {
-        alert(`You run away. As you stumble over the snow covered roots and stones, a figure lands on a tree infront of you. You manage to let out a single, bone chilling scream before they lung at you, a mass of tatered wings and metal.`)
+        alert(`You run away. As you stumble over the snow covered roots and stones, a figure lands on a tree infront of you, alerted to your presence by yout noisy retreat. You manage to let out a single, bone chilling scream before they lung at you, a mass of tatered wings and metal.`)
         alert(`The snow is stained black with your spilled oil, not the most pleasant end.`)
         forest()
-        return
+        return time
 }
 
 function sea() {
-    alert(`You head to the seaside. The ice is perfectly smooth, a glassy mirror reflecting the moons from above. The shore is blanketed in snow, bordering the blue sea in white. It's calm here, a pair of figures dance in the sky over the frozen waters.`)
+    alert(`You head to the seaside. The ice is perfectly smooth, a glassy mirror reflecting the moons from above. The shore is blanketed in snow, bordering the blue sea in white. It's calm here, a pair of winged figures dance in the sky over the frozen waters.`)
     let second_choice = Number(prompt(`Do you want to stare out across the ice (1), watch the figures (2) or leave (3)?`))
+    if(second_choice = 1) {
+        sea_stare
+    }
+    if(second_choice = 2) {
+        sea_watch
+    }
+    if(second_choice = 3) {
+        leave
+    }
+    time = time + 1
+    return time
 }
 
 function sea_stare() {
     alert(`You stare out across the frozen sea. You stay for quite some time, when you rise the figures have gone and the moons have gone below the horizon.`)
+    time = time + 2
+    return time
+}
+
+function sea_watch() {
+    alert(`You watch the figures frolic in the sky. They zip around the clouds, decending with incredible speed before ascending again.`)
+    time = time + 1
+    return time
+}
+
+function leave() {
+    alert(`You head back to the feild where you woke up. There wasn't anything that intrested you here anyways.`)
+    time = time + 1
 }
 
 function ruins() {
