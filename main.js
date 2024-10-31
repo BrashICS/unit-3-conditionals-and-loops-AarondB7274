@@ -63,3 +63,69 @@ function user() {
         console.log(`Sorry, thats too few characters. No worries, string length can be difficult.`)
     }
 }
+
+function start_game() {
+    let user_name = prompt(`Hello there, what's you name?`)
+    alert(`Welcome, ${user_name}, to a spooky (and *really* autistic) little game!`)
+    alert(`You find yourself in a familiar feild, only you don't seem to remember being here before and it's rather Halloween themed.
+    There's a pine forest to the east, a frozen sea to the south, a ruined city to the west and a grand mountian range to the north.
+    It's the middle of the night, the silver moons hang above and the icy wind wips around you and snow drifts down from the sky.`)
+    start_choice()
+}
+
+function start_choice() {
+    let first_choice = Number(prompt(`Where do you want to go, the forest (1), the sea (2), the ruins (3) or the mountains (4)?`))
+    if(first_choice=1) {
+        forest()
+        }
+    if(first_choice=2) {
+        sea()
+        }
+    if(first_choice=3) {
+        ruins()
+        }
+    if(first_choice=4) {
+        mountains()
+        }
+}
+function forest() {
+    alert(`You head to the forest. The trees and undergrowth are blanketed in a thick layer of snow. Its all quite, until you hear erie giggling and sound of struggle in the distance.`)
+    let second_choice = Number(prompt(`Do you want to stand you ground (1), hide (2) or run (3)?`))
+    if (second_choice = 1) {
+        forest_stand()
+    }
+    if (second_choice = 2) {
+        forest_hide()
+    }
+    if (second_choice = 3) {
+        forest_run()
+    }
+}
+
+function forest_stand() {
+        alert(`You stand your ground. The noises continue for quite some time, often punctuated with screams. A figure is launched above the canopy in the distance, and the forest goes silent as another follows.`)
+
+}
+
+function forest_hide() {
+        alert(`You hide in the under growth. The noises continue for quite some time, often punctuated with screams. The forest soon goes silent, and you come out from your hinding spot.`)
+    
+}
+
+function forest_run() {
+        alert(`You run away. As you stumble over the snow covered roots and stones, a figure lands on a tree infront of you. You manage to let out a single, bone chilling scream before they lung at you, a mass of tatered wings and metal.`)
+        alert(`The snow is stained black with your spilled oil, not the most pleasant end.`)
+            forest()
+}
+
+function sea() {
+
+}
+
+function ruins() {
+
+}
+
+function mountains() {
+
+}
