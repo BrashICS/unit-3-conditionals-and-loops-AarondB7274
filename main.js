@@ -203,7 +203,12 @@ if(time = 6.5) {
     alert(`Its very late into the night, the moons hang just above the western horizon. You should find shelter immediately.`)
 }
 
-if(time => 7.5, cover = ) {
+if(time > 7, cover = false) {
     time = 0
-    alert(`The sun has come up over the horizon, its sickly yellow glare burning your skin. The smell of burning metal perforates the air around you as you burn up.`)
+    alert(`The sun has come up over the horizon, its sickly yellow glare burning your skin. The smell of burning metal perforates the air around you as you are involitarily incinerated.`)
+}
+
+if(time > 7, cover = true) {
+    time = 0
+
 }
