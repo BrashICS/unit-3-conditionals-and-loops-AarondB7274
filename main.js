@@ -86,7 +86,6 @@ function start_choice() {
     if(first_choice=4) {
         mountains()
         }
-    time = time + 1
     return time
 }
 function forest() {
@@ -101,19 +100,18 @@ function forest() {
     if (second_choice = 3) {
         forest_run()
     }
-    time = time + 1
-    return
+    return time
 }
 
 function forest_stand() {
         alert(`You stand your ground. The noises continue for quite some time, often punctuated with screams. A figure is launched above the canopy in the distance, and the forest goes silent as another follows.`)
-        time = time + 1
+        time = time + 0.5
         return time
 }
 
 function forest_hide() {
         alert(`You hide in the undergrowth. The noises continue for quite some time, often punctuated with screams. The forest soon goes silent but you stay hidden longer out of fear, when you come out the moons have falled behind the trees.`)
-        time = time + 2
+        time = time + 1.5
         return time
 }
 
@@ -122,6 +120,11 @@ function forest_run() {
         alert(`The snow is stained black with your spilled oil, not the most pleasant end.`)
         forest()
         return time
+}
+
+function forest_second() {
+    alert(``)
+    let third_choice = Number(prompt(``))
 }
 
 function sea() {
@@ -136,25 +139,24 @@ function sea() {
     if(second_choice = 3) {
         sea_leave
     }
-    time = time + 1
     return time
 }
 
 function sea_stare() {
     alert(`You stare out across the frozen sea. You stay for quite some time, when you rise the figures have gone and the moons have gone below the horizon.`)
-    time = time + 2
+    time = time + 1.5
     return time
 }
 
 function sea_watch() {
     alert(`You watch the figures frolic in the sky. They zip around the clouds, decending with incredible speed before ascending again.`)
-    time = time + 1
+    time = time + 0.5
     return time
 }
 
 function sea_leave() {
     alert(`You head back to the feild where you woke up. There wasn't anything that intrested you here anyways.`)
-    time = time + 1
+    time = time + 0.5
 }
 
 function ruins() {
@@ -163,4 +165,45 @@ function ruins() {
 
 function mountains() {
 
+}
+
+
+if(time = 0.5) {
+    time = time + 0.5
+    alert(`Its very early into the night, the moons have just risen above the eastern horizon.`)
+}
+
+if(time = 1.5) {
+    time = time + 0.5
+    alert(`Its early into the night, the moons hover just above the eastern horizon.`)
+}
+
+if(time = 2.5) {
+    time = time + 0.5
+    alert(`Its just before midnight, the moons hang overhead.`)
+}
+
+if(time = 3.5) {
+    time = time + 0.5
+    alert(`Its midnight, the moons hang directly above you in the sky.`)
+}
+
+if(time = 4.5) {
+    time = time + 0.5
+    alert(`Its just after midnight, the moons hang nearly overhead.`)
+}
+
+if(time = 5.5) {
+    time = time + 0.5
+    alert(`Its late into the night, the moons hang over the western horizon. You should find shelter soon.`)
+}
+
+if(time = 6.5) {
+    time = time + 0.5
+    alert(`Its very late into the night, the moons hang just above the western horizon. You should find shelter immediately.`)
+}
+
+if(time => 7.5, cover = ) {
+    time = 0
+    alert(`The sun has come up over the horizon, its sickly yellow glare burning your skin. The smell of burning metal perforates the air around you as you burn up.`)
 }
