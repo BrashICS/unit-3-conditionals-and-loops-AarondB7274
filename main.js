@@ -63,13 +63,16 @@ function user() {
         console.log(`Sorry, thats too few characters. No worries, string length can be difficult.`)
     }
 }
-let time = 0
+
 function start_game() {
+    let time = 0
+    let loop = 0
     let user_name = prompt(`Hello there, what's you name?`)
-    alert(`Welcome, ${user_name}, to a spooky (and *really* autistic) little game!`)
-    alert(`You find yourself in a familiar feild, only you don't seem to remember being here before and it's rather Halloween themed. There's a pine forest to the east, a frozen sea to the south, a ruined city to the west and a grand mountian range to the north. It's the middle of the night, the silver moons hang above the horizon and the icy wind whips around you as snow drifts down from the sky.`)
+    let user_colour = prompt(`Now I just need a colour, any colour would work but I suggest your favourite.`)
+    alert(`Welcome, ${user_name}, to a slightly spooky (and *really* mentaly ill) little game!`)
+    alert(`You find yourself in a familiar feild, only you don't seem to remember being here before and it's rather Halloween themed. There's a pine forest to the east, a frozen sea to the south, a ruined city to the west and a grand mountian range to the north. It's just after sundown, the silver moons hang above the horizon and the icy wind whips around you as snow drifts down from the sky.`)
     start_choice()
-    return time
+    return time, user_name, user_colour, loop
 }
 
 function start_choice() {
@@ -123,7 +126,7 @@ function forest_run() {
 }
 
 function forest_second() {
-    alert(``)
+    alert(`You stand in the forest, the snow faintly lit ${user_colour} from the glow of your eyes.`)
     let third_choice = Number(prompt(``))
 }
 
@@ -131,32 +134,51 @@ function sea() {
     alert(`You head to the seaside. The ice is perfectly smooth, a glassy mirror reflecting the moons from above. The shore is blanketed in snow, bordering the blue sea in white. It's calm here, a pair of winged figures dance in the sky over the frozen waters.`)
     let second_choice = Number(prompt(`Do you want to stare out across the ice (1), watch the figures (2) or leave (3)?`))
     if(second_choice = 1) {
-        sea_stare
+        sea_stare()
+    } else if(second_choice = 2) {
+        sea_watch()
+    } else if(second_choice = 3) {
+        leave()
     }
-    if(second_choice = 2) {
-        sea_watch
-    }
-    if(second_choice = 3) {
-        sea_leave
-    }
+    time = time + 0
     return time
 }
 
 function sea_stare() {
     alert(`You stare out across the frozen sea. You stay for quite some time, when you rise the figures have gone and the moons have gone below the horizon.`)
+    sea_second()
     time = time + 1.5
     return time
 }
 
 function sea_watch() {
     alert(`You watch the figures frolic in the sky. They zip around the clouds, decending with incredible speed before ascending again.`)
+    sea_second()
     time = time + 0.5
     return time
 }
 
-function sea_leave() {
+function leave() {
     alert(`You head back to the feild where you woke up. There wasn't anything that intrested you here anyways.`)
+    start_choice()
     time = time + 0.5
+    return time
+}
+
+function sea_second() {
+    let third_choice = Number(prompt(`You can wait here longer (1) or go back to the start (2)`))
+    if(third_choice = 1) {
+        sea_wait()
+    } else if(third_choice = 2) {
+        sea_leave()
+    }
+    return time
+}
+
+function sea_wait() {
+    alert(`You stare you over the frozen waters. Its surface is perfectly smooth and still, not even a wave, frozen in time to be seen.`)
+    time = time + 0.5
+    return time
 }
 
 function ruins() {
@@ -195,7 +217,7 @@ if(time = 4.5) {
 
 if(time = 5.5) {
     time = time + 0.5
-    alert(`Its late into the night, the moons hang over the western horizon. You should find shelter soon.`)
+    alert(`Its late into the night, the moons hang over the western horizon. You should find shelter before the morning.`)
 }
 
 if(time = 6.5) {
@@ -204,11 +226,11 @@ if(time = 6.5) {
 }
 
 if(time > 7, cover = false) {
+    alert(`The sun comes up over the horizon, its sickly yellow glare burning your skin. The smell of burning metal perforates the air around you as you are involitarily incinerated.`)
+    start_choice()
     time = 0
-    alert(`The sun has come up over the horizon, its sickly yellow glare burning your skin. The smell of burning metal perforates the air around you as you are involitarily incinerated.`)
-}
-
-if(time > 7, cover = true) {
+} else if(time > 7, cover = true) {
+    alert(`The sun comes up over the horizon, its sickly yellow glare casting an orange hue over the outside world. Your hiding place protects you from it. Nothing will come after you in the day, but you won't be able to go anywhere either.`)
+    loop = loop + 1
     time = 0
-
 }
