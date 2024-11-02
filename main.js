@@ -66,6 +66,7 @@ function user() {
 let panic = 0
 let time = 0
 let loop = 0
+let cover = false
 function start_game() {
     time = 0
     panic = 0
@@ -221,15 +222,27 @@ function ruins_explore() {
 }
 
 function ruins_spire() {
-    alert(`You go towards the spire.`)
+    alert(`You go towards the spire. Upon closer inspection the jagged, impractical sructure is made of...corpses. Theres a sort of archway in the side of the structure.`)
+    let choice = Number(prompr(`Do you want to enter the spire (1) or leave the area?`))
+    if(choice == 1) {
+        ruins_spire_enter()
+    } else if(choice == 2) {
+        ruins()
+    }
+}
+
+function ruins_spire_enter() {
+    cover = true
+    alert(`You enter the corpse-spire. There's a damaged landing craft in the center, the ground is covered in frozen, rusting bodies.`)
+    let choice = Number(prompt(`A winged figure lands on the craft, it doesn't seem to notice you. You could run (1) or find somewhere to hide (2)`))
+    if(choice = 0) {}
 }
 
 function mountains() {
     alert(`You head to the mountain range. The towering stone plate rises high into the sky, `)
 }
 
-
-if(time = 0.5) {
+if(time == 0.5) {
     time = time + 0.5
     alert(`Its very early into the night, the moons have just risen above the eastern horizon.`)
 } else if(time == 1.5) {
