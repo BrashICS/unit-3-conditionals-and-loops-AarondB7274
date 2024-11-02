@@ -5,23 +5,30 @@
 
 /* Using font-size: larger to make things pop. Feel free to change. */
 body {
-    background-color:#36013F;
+    background-image:linear-gradient(darkslateblue, black);
     color: white;
     margin: 30px;
     font-size: x-large;
 }
 
 h1 {
+    color:silver;
     margin-bottom: 0;
     margin-left: 120px;
 }
 
 h6 {
+    color:silver;
     margin-top: 10px;
     margin-left: 120px;
 }
 
 h3 {
+    color:silver;
     text-decoration: underline;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p, ul, li {
+    color:silver;
 }

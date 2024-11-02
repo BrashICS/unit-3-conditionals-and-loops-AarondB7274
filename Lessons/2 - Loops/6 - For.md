@@ -2,4 +2,4 @@
 
 ## 3.6 - For
 
-![Coming Soon](../../images/cs.png)
+![Coming Soon](../images/cs.png)
