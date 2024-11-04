@@ -16,8 +16,8 @@
 - [Examples](#examples)
 - [A Note about `prompt()`](#a-note-about-prompt)
 - [Practice Time!](#practice-time)
-    - [Part 1 - ???](#part-1)
-    - [Part 2 - ???](#part-2)
+    - [Part 1 - Validate](#part-1---validate)
+    - [Part 2 - Guess](#part-2---guess)
     
 </td>
 <td td valign="top" style="height: 100px;padding-right:50px">
@@ -84,7 +84,9 @@ if (selection == 1) {
 }
 ```
 
-This completes the `if-statement` package, creating a powerful tool!
+<p style="text-align:center;font-size:larger;color:red">
+This completes the <code>if-statement</code> package, creating a <b>powerful</b> tool!
+</p>
 
 ---
 
@@ -138,9 +140,46 @@ if (menu_selection == null) {
 
 ### Practice Time!
 
-#### Part 1
+#### Part 1 - `is_number()`
+
+It can be really handy to have a function that tells you if a given value is a number or not. 
+
+#### Part 2 - Validate
+
+Whenever a user interacts with our program(s), we need to validate that what they've done makes sense. This is particularly important if they're typing something in.
+
+Let's validate part of a date. The day of the week.
+
+Create the function `which_day(n)` which takes a number and _returns_ the string representation of the day of the week where 1 == "Sunday" and 7 == "Saturday".  
+
+Here's how it will work:
+
+1. The number will _not_ come from a prompt. It will be passed to the function when you call it - like this: `which_day(4)`
+2. First, check to ensure the value that came in is a `'number'` by using `typeof`. This has been demonstrated in class, but here's a reminder: `if (typeof my_variable == "number")`  
+If it's not a number, return "Invalid type".
+3. 
+
+
+#### Part 3 - Guess!
+
+In your [main.js](../../main.js) code file, you will see the `randInt()` function to help create random numbers.
+
+1. Add a button to your [index.html](../../index.html) page that says "Guess 1-10"  
+Reminder:  `<button id="guess">Guess 1-10</button>`
+
+2. Add an event-listener in your [main.js](../../main.js) code file for the button to call the function `guess_10()` when the button is _clicked_.  
+Reminder: `document.getElementById("guess").addEventListener("click", guess_10);`  
+
+3. When the `guess_10()` function is called, it should do the following:
+    1. Create a _hidden_ <u>random</u> number from 1 to 10 (inclusive)
+    2. Ask the user (prompt) to select a number from 1 to 10.
+    3. Compare their number to the hidden number.
+        - If they have guessed the correct number, tell them.
+        - If their guess was outside of the correct range (1-10), tell them this _and_ what the hidden number was.
+        - If their guess was too low, tell them this _and_ the correct number.
+        - If their guess was too high, tell them this _and_ the correct number.
+        - For all other cases, tell the user there was an error.
 
 
 
 
-#### Part 2

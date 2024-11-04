@@ -131,7 +131,7 @@ Menus are a good example of using `if-statements` to control the flow of a progr
 
     Whatever number they select will be stored in `selection`.  
 
-2. Based on what the user selects, use an `if-statement` and `else-if` statements to output (console.log) the following:
+2. Based on what the user selects, use an `if-statement` and `else-if` statements to output (`alert`) the following:
 
     | Value | Output |
     |---|---|
@@ -142,7 +142,7 @@ Menus are a good example of using `if-statements` to control the flow of a progr
     |5|"Bye!"|
 
 3. If the user selects `1 - Play`, we should then ask them a difficulty level of `1 - Easy`, `2 - Medium`, or `3 - Hard`.  
-After you print "Let's play!" to the console, prompt the user for their selection of difficulty.  <br><br>
+After you alert "Let's play!", prompt the user for their selection of difficulty.  <br><br>
 Depending on what they select, output the following:
     | Value | Output |
     |---|---|
@@ -170,7 +170,7 @@ In that example, it is checking if the value is greater than or equal to 5 **and
 
 1. Create the function `greeting(hour)`  
 
-2. `hour` will be a value between 0-23 ([military time](https://en.wikipedia.org/wiki/24-hour_clock)). Just the hour, no minutes.
+2. `hour` will be a value between 0-23 that is passed to the function (no prompts or alerts). This is [military time](https://en.wikipedia.org/wiki/24-hour_clock).
 
 3. Depending on the value of `hour`, _return_ "Good morning!" (hour is 0-11), "Good afternoon!" (hour is 12-17), or "Good evening!" (hour is 18-23). If the hour is _any other value_, return "Invalid hour!".
 
@@ -180,7 +180,7 @@ In that example, it is checking if the value is greater than or equal to 5 **and
 
 1. Create the function `two_digit()` that does the following:
 
-2. Inside the `two-digit()` function Generate a random two-digit value and return a value based on the following:
+2. Inside the `two-digit()` function Generate a random two-digit value and then _return_ based on the following:
 - If the value is zero, return 0
 - If the value is `even`, return the word "Even"
 - If the value is `odd`, return the word "Odd"
