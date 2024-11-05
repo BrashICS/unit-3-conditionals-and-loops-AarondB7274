@@ -307,19 +307,19 @@ function mountains() {
 if(time == 0.5) {
     time = time + 0.5
     alert(`Its very early into the night, the moons have just risen above the eastern horizon.`)
-} else if(time == (1.5/difficulty_modifier)+0.5) {
+} else if(time == (1/difficulty_modifier)+0.5) {
     time = time + 0.5
     alert(`Its early into the night, the moons hover just above the eastern horizon.`)
-} else if(time == (2.5/difficulty_modifier)+0.5) {
+} else if(time == (2/difficulty_modifier)+0.5) {
     time = time + 0.5
     alert(`Its just before midnight, the moons hang overhead.`)
-} else if(time == (3.5/difficulty_modifier)+0.5) {
+} else if(time == (3/difficulty_modifier)+0.5) {
     time = time + 0.5
     alert(`Its midnight, the moons hang directly above you in the sky.`)
-} else if(time == (4.5/difficulty_modifier)+0.5) {
+} else if(time == (4/difficulty_modifier)+0.5) {
     time = time + 0.5
     alert(`Its just after midnight, the moons hang nearly overhead.`)
-} else if(time == (5.5/difficulty_modifier)+0.5) {
+} else if(time == (5/difficulty_modifier)+0.5) {
     time = time + 0.
     alert(`Its late into the night, the moons hang over the western horizon. You should find shelter before the morning.`)
 } else if(time == (6*difficulty_modifier)+0.5) {
