@@ -181,13 +181,15 @@ In that example, it is checking if the value is greater than or equal to 5 **and
 1. Create the function `two_digit()` that does the following:
 
 2. Inside the `two-digit()` function Generate a random two-digit value and then _return_ based on the following:
-- If the value is zero, return 0
+- If the value is specifically zero, return 0  
+- If the value is specficially divisible by 2 _AND_ 3, return "Divisible by 6"
+
+However,
 - If the value is `even`, return the word "Even"
 - If the value is `odd`, return the word "Odd"
-- If the value is divisible by 2 _AND_ 3, return 6
 - If the value is **_prime_**, return "Prime"
 
-Keep in mind, not all of those are ELSE-IF situations.
+Keep in mind, not all of those require ELSE-IF.
 
 <br><br>
 

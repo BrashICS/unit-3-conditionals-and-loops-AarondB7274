@@ -16,8 +16,9 @@
 - [Examples](#examples)
 - [A Note about `prompt()`](#a-note-about-prompt)
 - [Practice Time!](#practice-time)
-    - [Part 1 - Validate](#part-1---validate)
-    - [Part 2 - Guess](#part-2---guess)
+    - [Part 1 - is_number](#part-1---is_number)
+    - [Part 2 - Validate](#part-2---validate)
+    - [Part 3 - Guess](#part-3---guess)
     
 </td>
 <td td valign="top" style="height: 100px;padding-right:50px">
@@ -144,25 +145,32 @@ if (menu_selection == null) {
 
 It can be really handy to have a function that tells you if a given value is a number or not. 
 
+We can check that a value or variable is a real `'number'` by using `typeof`. This has been demonstrated in class in passing, but here's a reminder: `if (typeof my_variable == "number")` 
+
+Create the function `is_number(num)` that will return `true` if `num` is, in fact, a real number and `false` otherwise.
+
 #### Part 2 - Validate
 
 Whenever a user interacts with our program(s), we need to validate that what they've done makes sense. This is particularly important if they're typing something in.
 
 Let's validate part of a date. The day of the week.
 
-Create the function `which_day(n)` which takes a number and _returns_ the string representation of the day of the week where 1 == "Sunday" and 7 == "Saturday".  
+Create the function `which_day(n)` which takes a **number** and _returns_ the **string** representation of the day of the week where 1 == "Sunday" and 7 == "Saturday".  
 
 Here's how it will work:
 
-1. The number will _not_ come from a prompt. It will be passed to the function when you call it - like this: `which_day(4)`
-2. First, check to ensure the value that came in is a `'number'` by using `typeof`. This has been demonstrated in class, but here's a reminder: `if (typeof my_variable == "number")`  
-If it's not a number, return "Invalid type".
-3. 
+1. The number will _not_ come from a prompt. It will be passed to the function when you call it - like this: `which_day(4)`  
+
+2. First, check that the value coming in (`n`) is a number (convenient that you just created the `is_number()` function. If `n` not a number, _return_ "Invalid type".  
+
+3. Next you will setup your code to _return_ the string representation of the day of the week ("Sunday", "Monday", "Tuesday", etc).
+
+4. In all other cases, _return_ "Invalid value".
 
 
 #### Part 3 - Guess!
 
-In your [main.js](../../main.js) code file, you will see the `randInt()` function to help create random numbers.
+In your [main.js](../../main.js) code file, you will see the `randInt()` function. It creates a random number from `min` to `max`.
 
 1. Add a button to your [index.html](../../index.html) page that says "Guess 1-10"  
 Reminder:  `<button id="guess">Guess 1-10</button>`
@@ -183,3 +191,6 @@ Reminder: `document.getElementById("guess").addEventListener("click", guess_10);
 
 
 
+<br><br>
+
+🐿️
