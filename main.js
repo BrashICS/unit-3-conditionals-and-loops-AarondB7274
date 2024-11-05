@@ -71,12 +71,10 @@ function start_game() {
     time = 0
     panic = 0
     loop = 0
-    let user_name = prompt(`Hello there, what's you name?`)
-    let user_colour = prompt(`Now I just need a colour, any colour would work but I suggest your favourite.`)
-    alert(`Welcome, ${user_name}, to a slightly spooky (and *really* mentaly ill) little game!`)
+    alert(`Welcome to a slightly spooky (and *really* mentaly ill) little game! I've put a lot of work into this, so I hope you enjoy!`)
     alert(`You wake up in a familiar feild, only you don't seem to remember being here before. There's a pine forest to the east, a frozen sea to the south, a ruined city to the west and a grand mountian range to the north. It's just after sundown, the silver moons hang above the horizon and the icy wind whips around you as snow drifts down from the sky.`)
     start_choice()
-    return time, user_name, user_colour, loop, panic
+    return time, loop, panic
 }
 
 function start_choice() {
@@ -137,7 +135,7 @@ function forest_run() {
 }
 
 function forest_second() {
-    alert(`You stand in the forest, the snow faintly lit ${user_colour} from the glow of your eyes.`)
+    alert(`You stand in the forest, the snow faintly lit purple from the glow of your eyes.`)
     let third_choice = Number(prompt(`Do you want to venture deeper into the forest (1), or go back (2)?`))
     if(third_choice == 1) {
         forest_continue()
@@ -273,6 +271,10 @@ if(time == 0.5) {
     time = 0
 }
 
-if(panic > 7) {
+if(panic = 6) {
+    panic = panic + 0.5
     alert(``)
+} else if(panic > 7) {
+    alert(``)
+    panic = 0
 }
