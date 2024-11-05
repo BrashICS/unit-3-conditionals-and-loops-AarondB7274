@@ -101,19 +101,23 @@ function start_choice() {
     if(panic > 0) {
         panic = panic - 1
     }
-    let first_choice = Number(prompt(`Where do you want to go:
+    let choice = Number(prompt(`Where do you want to go:
         (1) The forest,
         (2) The sea,
         (3) The ruins
         (4) Or exit?`))
-    if(first_choice == 1) {
+    if(choice == 1) {
         forest()
-        } else if(first_choice == 2) {
+        return
+        } else if(choice == 2) {
         sea()
-        } else if(first_choice == 3) {
+        return
+        } else if(choice == 3) {
         ruins()
-        } else if(first_choice == 4) {
+        return
+        } else if(choice == 4) {
         exit()
+        return
         } else {
             alert (`That wasn't one of the options. You can't plot-armor your way out of this one.`)
             start_choice()
@@ -129,10 +133,13 @@ function forest() {
         (3) Or run?`))
     if (second_choice == 1) {
         forest_stand()
+        return
     } else if (second_choice == 2) {
         forest_hide()
+        return
     } else if (second_choice == 3) {
         forest_run()
+        return
     } else {
         alert(`That wasn't one of the options. You can't plot-armor your way out of this one.`)
         forest()
@@ -172,8 +179,10 @@ function forest_second() {
         (2) Or go back?`))
     if(choice == 1) {
         forest_continue()
+        return
     } else if(third_choice == 2) {
         leave()
+        return
     } else {
         alert(`That wasn't one of the options. You can't plot-armor your way out of this one.`)
         forest_second()
@@ -189,10 +198,13 @@ function sea() {
         (3) Or leave?`))
     if(second_choice == 1) {
         sea_stare()
+        return
     } else if(second_choice == 2) {
         sea_watch()
+        return
     } else if(second_choice == 3) {
         leave()
+        return
     } else {
         alert(`That wasn't one of the options. You can't plot-armor your way out of this one.`)
         sea()
@@ -237,8 +249,10 @@ function sea_second() {
     (2) Or go return to the feild?`))
     if(choice == 1) {
         sea_wait()
+        return
     } else if(choice == 2) {
         sea_leave()
+        return
     } else {
         alert(`That wasn't one of the options. You can't plot-armor your way out of this one.`)
         forest()
@@ -261,10 +275,13 @@ function ruins() {
         (3) Or leave?`))
     if(choice == 1) {
         ruins_explore()
+        return
     } else if(choice == 2) {
         ruins_spire()
+        return
     } else if(choice == 3) {
         leave()
+        return
     } else {
         alert (`That wasn't one of the options. You can't plot-armor your way out of this one.`)
         ruins()
@@ -283,8 +300,10 @@ function ruins_spire() {
         (2) Or leave the area?`))
     if(choice == 1) {
         ruins_spire_enter()
+        return
     } else if(choice == 2) {
         ruins()
+        return
     }
 }
 
@@ -295,9 +314,9 @@ function ruins_spire_enter() {
         (1) Run
         (2) Or find somewhere to hide?`))
     if(choice == 1) {
-        alert(``)
+        //stuff
     } else if(choice == 2) {
-        alert(``)
+        //stuff
     } else if(choice == null || choice != 1 & choice != 2) {
         alert(`That wasn't one of the options. You can't plot-armor your way out of this one.`)
         ruins_spire_enter()
@@ -305,7 +324,7 @@ function ruins_spire_enter() {
 }
 
 function exit() {
-    alert(`Adios!`)
+    alert(`Goodbye! Play again sometime, won't you?`)
     return
 }
 
@@ -327,7 +346,7 @@ if(time == 0.5) {
 } else if(time == (5/difficulty_modifier)+0.5) {
     time = time + 0.
     alert(`Its late into the night, the moons hang over the western horizon. You should find shelter before the morning.`)
-} else if(time == (6*difficulty_modifier)+0.5) {
+} else if(time == (6/difficulty_modifier)+0.5) {
     time = time + 0.5
     alert(`Its very late into the night, the moons hang just above the western horizon. You should find shelter immediately.`)
 } else if(time > 7*difficulty_modifier & cover == false) {
