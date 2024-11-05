@@ -34,6 +34,7 @@ let panic = 0
 let time = 0
 let loop = 0
 let cover = false
+let difficulty_modifier = 1
 
 function menu() {
     alert(`Welcome to a slightly spooky (and *really* mentaly ill) little game! I've put a lot of work into this, so I hope you enjoy!`)
@@ -93,6 +94,7 @@ function load_game() {
     alert(`Saved games coming soon!`)
     start_game()
 }
+
 function start_choice() {
     time = 0
     cover = false
@@ -103,7 +105,7 @@ function start_choice() {
         (1) The forest,
         (2) The sea,
         (3) The ruins
-        (4) Or the mountains?`))
+        (4) Or exit?`))
     if(first_choice == 1) {
         forest()
         } else if(first_choice == 2) {
@@ -111,7 +113,7 @@ function start_choice() {
         } else if(first_choice == 3) {
         ruins()
         } else if(first_choice == 4) {
-        mountains()
+        exit()
         } else {
             alert (`That wasn't one of the options. You can't plot-armor your way out of this one.`)
             start_choice()
@@ -223,14 +225,16 @@ function sea_watch() {
 }
 
 function leave() {
-    alert(`You head back to the feild where you woke up. There wasn't anything that intrested you here anyways.`)
+    alert(`There wasn't anything that intrested you here anyways. You head back to the feild where you woke up.`)
     start_choice()
     time = time + 0.5
     return time
 }
 
 function sea_second() {
-    let choice = Number(prompt(`You can wait here longer (1) or go back to the start (2)`))
+    let choice = Number(prompt(`Do you want to:
+    (1) wait here longer
+    (2) Or go return to the feild?`))
     if(choice == 1) {
         sea_wait()
     } else if(choice == 2) {
@@ -274,7 +278,7 @@ function ruins_explore() {
 
 function ruins_spire() {
     alert(`You go towards the spire. Upon closer inspection the jagged, impractical sructure is made of...corpses. Theres a sort of archway in the side of the structure.`)
-    let choice = Number(prompr(`Do you want to:
+    let choice = Number(prompt(`Do you want to:
         (1) Enter the spire
         (2) Or leave the area?`))
     if(choice == 1) {
@@ -300,8 +304,9 @@ function ruins_spire_enter() {
     }
 }
 
-function mountains() {
-    alert(`You head to the mountain range. The towering stone plate rises high into the sky, `)
+function exit() {
+    alert(`Adios!`)
+    return
 }
 
 if(time == 0.5) {
@@ -325,11 +330,11 @@ if(time == 0.5) {
 } else if(time == (6*difficulty_modifier)+0.5) {
     time = time + 0.5
     alert(`Its very late into the night, the moons hang just above the western horizon. You should find shelter immediately.`)
-} else if(time > 7*difficulty_modifier, cover == false) {
+} else if(time > 7*difficulty_modifier & cover == false) {
     alert(`The sun comes up over the horizon, its sickly yellow glare burning your skin. The smell of burning metal perforates the air around you as you are involitarily incinerated.`)
     start_choice()
     time = 0
-} else if(time > 7*difficulty_modifier, cover == true) {
+} else if(time > 7*difficulty_modifier & cover == true) {
     alert(`The sun comes up over the horizon, its sickly yellow glare casting an orange hue over the outside world. Your hiding place protects you from it. Nothing will come after you in the day, but you won't be able to go anywhere either.`)
     loop = loop + 1
     time = 0
