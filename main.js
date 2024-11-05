@@ -30,60 +30,80 @@ function randInt(min, max) {
 
 // For "equal to" use == , for "and" use && , for  "or" use ||
 
-function user() {
-    let user_age = Number(prompt(`How old are you?`))
-    if (user_age >= 60) {
-        console.log(`You qualify for a senior discount!`)
-    }
-    if (user_age < 16) {
-        console.log(`You aren't old enough to drive yet! No worries, I'm old enough and don't know anyways.`)
-    }
-    if (user_age == 44) {
-        console.log(`You're the same age as Mr. Brash, cool!`)
-    }
-    let user_name = prompt(`What's your prefered name (or tag)?`)
-    if (user_name == "Mr. Squirrel") {
-        console.log(`Are you a 🐿️?`)
-    }
-    let name_length = user_name.length
-    if(name_length < 4) {
-        console.log(`You have an under average length name!`)
-    }
-    if(name_length < 8) {
-        console.log(`You have an above average length name!`)
-    }
-    let name_guess = Number(prompt(`How many character do you think that was?`))
-    if(name_guess = name_length) {
-        console.log(`Thats right! Your name is ${name_length} characters long! Not the hardest guess, if I'm honest.`)
-    }
-    if(name_guess > name_length) {
-        console.log(`Sorry, thats too many characters. No worries, string length can be difficult.`)
-    }
-    if(name_guess < name_length) {
-        console.log(`Sorry, thats too few characters. No worries, string length can be difficult.`)
-    }
-}
 let panic = 0
 let time = 0
 let loop = 0
 let cover = false
+
+function menu() {
+    alert(`Welcome to a slightly spooky (and *really* mentaly ill) little game! I've put a lot of work into this, so I hope you enjoy!`)
+    let choice = +prompt(`
+        (1) - Start
+        (2) - Settings
+        (3) - DLC & Updates
+        (4) - Exit`)
+    if(choice == 1) {
+        start_game()
+    } else if(choice == 2) {
+        settings()
+    } else if(choice == 3) {
+        extra_content()
+    } else if(choice == 4) {
+        alert(`Have a great day, don't die out there!`)
+    }
+}
 function start_game() {
+    let choice = prompt(`Do you want to:
+        (1) - Start a new game
+        (2) - Load a saved game`)
+    if(choice == 1) {
+        alert(`Starting a new game!`)
+        new_game()
+    } else if(choice == 2) {
+        alert(`Loading your saved games!`)
+        load_game()
+    }
+}
+
+function new_game() {
+    let choice = prompt(`What difficulty do you want to play on?
+        (1) - Merciful
+        (2) - Standard
+        (3) - Painful`)
+    if(choice == 1) {
+        let difficulty_modifier = 0.5
+    } else if(choice == 2) {
+        let difficulty_modifier = 1
+    } else if(choice == 3 ) {
+        let difficulty_modifier = 2
+    } else {
+        alert(`That isn't a difficulty.`)
+        start_game()
+        return
+    }
     time = 0
     panic = 0
     loop = 0
-    alert(`Welcome to a slightly spooky (and *really* mentaly ill) little game! I've put a lot of work into this, so I hope you enjoy!`)
     alert(`You wake up in a familiar feild, only you don't seem to remember being here before. There's a pine forest to the east, a frozen sea to the south, a ruined city to the west and a grand mountian range to the north. It's just after sundown, the silver moons hang above the horizon and the icy wind whips around you as snow drifts down from the sky.`)
     start_choice()
     return time, loop, panic
 }
 
+function load_game() {
+    alert(`Saved games coming soon!`)
+    start_game()
+}
 function start_choice() {
     time = 0
     cover = false
     if(panic > 0) {
         panic = panic - 1
     }
-    let first_choice = Number(prompt(`Where do you want to go, the forest (1), the sea (2), the ruins (3) or the mountains (4)?`))
+    let first_choice = Number(prompt(`Where do you want to go:
+        (1) The forest,
+        (2) The sea,
+        (3) The ruins
+        (4) Or the mountains?`))
     if(first_choice == 1) {
         forest()
         } else if(first_choice == 2) {
@@ -92,12 +112,19 @@ function start_choice() {
         ruins()
         } else if(first_choice == 4) {
         mountains()
+        } else {
+            alert (`That wasn't one of the options. You can't plot-armor your way out of this one.`)
+            start_choice()
         }
     return time, cover, panic
 }
+
 function forest() {
     alert(`You head to the forest. The trees and undergrowth are blanketed in a thick layer of snow. Its all quite and you venture farther in, the snow crunching beneath your feet. After a while you hear erie giggling and sounds of struggle in the distance.`)
-    let second_choice = Number(prompt(`Do you want to stand your ground (1), hide (2) or run (3)?`))
+    let second_choice = Number(prompt(`Do you want to:
+        (1) Stand your ground,
+        (2) Hide
+        (3) Or run?`))
     if (second_choice == 1) {
         forest_stand()
     } else if (second_choice == 2) {
@@ -105,7 +132,9 @@ function forest() {
     } else if (second_choice == 3) {
         forest_run()
     } else {
-        alert(``)
+        alert(`That wasn't one of the options. You can't plot-armor your way out of this one.`)
+        forest()
+        return
     }
     return time
 }
@@ -136,23 +165,36 @@ function forest_run() {
 
 function forest_second() {
     alert(`You stand in the forest, the snow faintly lit purple from the glow of your eyes.`)
-    let third_choice = Number(prompt(`Do you want to venture deeper into the forest (1), or go back (2)?`))
-    if(third_choice == 1) {
+    let choice = Number(prompt(`Do you want to:
+        (1) Venture deeper into the forest
+        (2) Or go back?`))
+    if(choice == 1) {
         forest_continue()
     } else if(third_choice == 2) {
         leave()
+    } else {
+        alert(`That wasn't one of the options. You can't plot-armor your way out of this one.`)
+        forest_second()
+        return
     }
 }
 
 function sea() {
     alert(`You head to the seaside. The ice is perfectly smooth, a glassy mirror reflecting the moons from above. The shore is blanketed in snow, bordering the blue sea in white. It's calm here, a pair of winged figures dance in the sky over the frozen waters.`)
-    let second_choice = Number(prompt(`Do you want to stare out across the ice (1), watch the figures (2) or leave (3)?`))
+    let second_choice = Number(prompt(`Do you want to:
+        (1) Stare out across the ice,
+        (2) Watch the figures
+        (3) Or leave?`))
     if(second_choice == 1) {
         sea_stare()
     } else if(second_choice == 2) {
         sea_watch()
     } else if(second_choice == 3) {
         leave()
+    } else {
+        alert(`That wasn't one of the options. You can't plot-armor your way out of this one.`)
+        sea()
+        return
     }
     time = time + 0
     return time
@@ -188,11 +230,15 @@ function leave() {
 }
 
 function sea_second() {
-    let third_choice = Number(prompt(`You can wait here longer (1) or go back to the start (2)`))
-    if(third_choice == 1) {
+    let choice = Number(prompt(`You can wait here longer (1) or go back to the start (2)`))
+    if(choice == 1) {
         sea_wait()
-    } else if(third_choice == 2) {
+    } else if(choice == 2) {
         sea_leave()
+    } else {
+        alert(`That wasn't one of the options. You can't plot-armor your way out of this one.`)
+        forest()
+        return
     }
     return time
 }
@@ -205,13 +251,20 @@ function sea_wait() {
 
 function ruins() {
     alert(`You head towards the ruined city. The crumbling buildings tower overhead, their windows strewn about as fragments of glass. Broken rebar jut out from the ends of snapped skyscrapers. A head crunches beneath your feet, the message "FATAL ERROR" displayed beneath its glass face. A spire made of...something, rises in the distance.`)
-    let second_choice = Number(prompt(`Do you want to explore the city (1), go towards the spire (2) or leave (3)?`))
-    if(second_choice == 1) {
+    let choice = Number(prompt(`Do you want to:
+        (1) Explore the city,
+        (2) Or towards the spire
+        (3) Or leave?`))
+    if(choice == 1) {
         ruins_explore()
-    } else if(second_choice == 2) {
+    } else if(choice == 2) {
         ruins_spire()
-    } else if(second_choice == 3) {
+    } else if(choice == 3) {
         leave()
+    } else {
+        alert (`That wasn't one of the options. You can't plot-armor your way out of this one.`)
+        ruins()
+        return
     }
 }
 
@@ -221,7 +274,9 @@ function ruins_explore() {
 
 function ruins_spire() {
     alert(`You go towards the spire. Upon closer inspection the jagged, impractical sructure is made of...corpses. Theres a sort of archway in the side of the structure.`)
-    let choice = Number(prompr(`Do you want to enter the spire (1) or leave the area?`))
+    let choice = Number(prompr(`Do you want to:
+        (1) Enter the spire
+        (2) Or leave the area?`))
     if(choice == 1) {
         ruins_spire_enter()
     } else if(choice == 2) {
@@ -231,9 +286,18 @@ function ruins_spire() {
 
 function ruins_spire_enter() {
     cover = true
-    alert(`You enter the corpse-spire. There's a damaged landing craft in the center, the ground is covered in frozen, rusting bodies.`)
-    let choice = Number(prompt(`A winged figure lands on the craft, it doesn't seem to notice you. You could run (1) or find somewhere to hide (2)`))
-    if(choice = 0) {}
+    alert(`You enter the corpse-spire. There's a damaged landing craft in the center, the ground is covered in frozen, rusting bodies.A winged figure lands on the craft, it doesn't seem to notice you.`)
+    let choice = Number(prompt(`Do you want to:
+        (1) Run
+        (2) Or find somewhere to hide?`))
+    if(choice == 1) {
+        alert(``)
+    } else if(choice == 2) {
+        alert(``)
+    } else if(choice == null || choice != 1 & choice != 2) {
+        alert(`That wasn't one of the options. You can't plot-armor your way out of this one.`)
+        ruins_spire_enter()
+    }
 }
 
 function mountains() {
@@ -243,38 +307,38 @@ function mountains() {
 if(time == 0.5) {
     time = time + 0.5
     alert(`Its very early into the night, the moons have just risen above the eastern horizon.`)
-} else if(time == 1.5) {
+} else if(time == (1.5/difficulty_modifier)+0.5) {
     time = time + 0.5
     alert(`Its early into the night, the moons hover just above the eastern horizon.`)
-} else if(time == 2.5) {
+} else if(time == (2.5/difficulty_modifier)+0.5) {
     time = time + 0.5
     alert(`Its just before midnight, the moons hang overhead.`)
-} else if(time == 3.5) {
+} else if(time == (3.5/difficulty_modifier)+0.5) {
     time = time + 0.5
     alert(`Its midnight, the moons hang directly above you in the sky.`)
-} else if(time == 4.5) {
+} else if(time == (4.5/difficulty_modifier)+0.5) {
     time = time + 0.5
     alert(`Its just after midnight, the moons hang nearly overhead.`)
-} else if(time == 5.5) {
+} else if(time == (5.5/difficulty_modifier)+0.5) {
     time = time + 0.
     alert(`Its late into the night, the moons hang over the western horizon. You should find shelter before the morning.`)
-} else if(time == 6.5) {
+} else if(time == (6*difficulty_modifier)+0.5) {
     time = time + 0.5
     alert(`Its very late into the night, the moons hang just above the western horizon. You should find shelter immediately.`)
-} else if(time > 7, cover == false) {
+} else if(time > 7*difficulty_modifier, cover == false) {
     alert(`The sun comes up over the horizon, its sickly yellow glare burning your skin. The smell of burning metal perforates the air around you as you are involitarily incinerated.`)
     start_choice()
     time = 0
-} else if(time > 14, cover == true) {
+} else if(time > 7*difficulty_modifier, cover == true) {
     alert(`The sun comes up over the horizon, its sickly yellow glare casting an orange hue over the outside world. Your hiding place protects you from it. Nothing will come after you in the day, but you won't be able to go anywhere either.`)
     loop = loop + 1
     time = 0
 }
 
-if(panic = 6) {
+if(panic == 6/difficulty_modifier) {
     panic = panic + 0.5
     alert(``)
-} else if(panic > 7) {
+} else if(panic > 7/difficulty_modifier) {
     alert(``)
     panic = 0
 }
