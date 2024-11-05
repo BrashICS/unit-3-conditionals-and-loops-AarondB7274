@@ -100,12 +100,12 @@ function forest() {
     let second_choice = Number(prompt(`Do you want to stand your ground (1), hide (2) or run (3)?`))
     if (second_choice == 1) {
         forest_stand()
-    }
-    if (second_choice == 2) {
+    } else if (second_choice == 2) {
         forest_hide()
-    }
-    if (second_choice == 3) {
+    } else if (second_choice == 3) {
         forest_run()
+    } else {
+        alert(``)
     }
     return time
 }
