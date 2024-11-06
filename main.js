@@ -349,20 +349,71 @@ if(time == 0.5) {
 } else if(time == (6/difficulty_modifier)+0.5) {
     time = time + 0.5
     alert(`Its very late into the night, the moons hang just above the western horizon. You should find shelter immediately.`)
-} else if(time > 7*difficulty_modifier & cover == false) {
+} else if(time > 7*difficulty_modifier && cover == false) {
     alert(`The sun comes up over the horizon, its sickly yellow glare burning your skin. The smell of burning metal perforates the air around you as you are involitarily incinerated.`)
     start_choice()
     time = 0
-} else if(time > 7*difficulty_modifier & cover == true) {
+} else if(time > 7*difficulty_modifier && cover == true) {
     alert(`The sun comes up over the horizon, its sickly yellow glare casting an orange hue over the outside world. Your hiding place protects you from it. Nothing will come after you in the day, but you won't be able to go anywhere either.`)
     loop = loop + 1
     time = 0
 }
 
-if(panic == 6/difficulty_modifier) {
+if(panic == 0.5) {
+
+} else if(panic == 6/difficulty_modifier+0.5) {
     panic = panic + 0.5
-    alert(``)
+    alert(`You colapse into the snow, a high temperature warning blaring from your eyes as you gasp and struggle to your feet. You should find somewhere to relax ASAP.`)
 } else if(panic > 7/difficulty_modifier) {
-    alert(``)
+    alert(`You colapse into the snow, your limbs moving of their own accord, dragging you to a secluded place. Before long your steel chasis sprouts a pair of tattered wings and you soon  have a body count in the double digits.`)
     panic = 0
+    start_choice()
+}
+
+
+function user() {
+    let user_age = +prompt(`How old are you?`)
+    if(user_age >= 60) {
+        console.log(`You qaulify for a senior discount!`)
+    } else if(user_age == 44) {
+        console.log(`You're the same age as Mr. Brash, neat!`)
+    } else if(user_age < 16) {
+        console.log(`You aren't old enough to drive yet! No worries, I'm old enough and haven't gotten my license yet.`)
+    }
+    let age_div = user_age % 2
+    if(age_div = 1) {
+        console.log(`Your age is an odd number!`)
+    } else {
+        console.log(`Your age is an even number!`)
+    }
+    let user_name = prompt(`Whats your prefered name (or user tag!)?`)
+    if(user_name == Mr. Squirrel) {
+        console.log(`Are you a 🐿️?`)
+    }
+    let name_guess = +prompt(`Now, how many characters do you think that was?`)
+    if(name_guess > user_name.length) {
+        console.log(`Sorry, thats too many characters`)
+    } else if(name_guess < user_name.length) {
+        console.log(`Sorry, thats too few characters.`)
+    } else {
+        console.log(`Thats right! The user name you entered is ${user_name.length} characters long!`)
+    }
+}
+
+function longer_string(str1, str2) {
+    if( str1.length > str2.length) {
+        return str1
+    } else {
+        return str2
+    }
+}
+
+function discriminant(a,b,c) {
+    if(b**2-4*a*c > 0) {
+        console.log(`That parabola has two zero's.`)
+    } else if(b**2-4*a*c < 0) {
+        console.log(`That parabola doesn't have any zero's.`)
+    } else {
+        console.log(`That parabola has one zero.`)
+    }
 }
