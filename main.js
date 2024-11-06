@@ -427,3 +427,23 @@ function discriminant(a,b,c) {
         console.log(`That parabola has one zero.`)
     }
 }
+
+function greeting(hour) {
+    if(hour < 12 && hour > 0) {
+        return "Good morning!"
+    } else if(hour < 18 && hour > 11) {
+        return "Good afternoon!"
+    } else if(hour < 24 && hour > 17) {
+        return "Good evening!"
+    } else {
+        return "Invalid hour!"
+    }
+}
+
+function two_digit() {
+    let digit = randInt(10,99)
+    if(digit == 0) {
+        return 0
+    } else if()
+}
+
