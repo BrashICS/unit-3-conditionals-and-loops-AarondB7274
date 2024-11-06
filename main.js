@@ -152,7 +152,7 @@ function forest_stand() {
         alert(`You stand your ground. The noises continue for quite some time, often punctuated with screams. A winged figure is launched above the canopy in the distance, and the forest goes silent as another follows.`)
         forest_second()
         time = time + 0.5
-        panic = panic + 1
+        panic = panic + 0.5
         return time, panic
 }
 
@@ -331,22 +331,22 @@ function exit() {
 if(time == 0.5) {
     time = time + 0.5
     alert(`Its very early into the night, the moons have just risen above the eastern horizon.`)
-} else if(time == (1/difficulty_modifier)+0.5) {
+} else if(time == 1) {
     time = time + 0.5
     alert(`Its early into the night, the moons hover just above the eastern horizon.`)
-} else if(time == (2/difficulty_modifier)+0.5) {
+} else if(time == 2) {
     time = time + 0.5
     alert(`Its just before midnight, the moons hang overhead.`)
-} else if(time == (3/difficulty_modifier)+0.5) {
+} else if(time == 3) {
     time = time + 0.5
     alert(`Its midnight, the moons hang directly above you in the sky.`)
-} else if(time == (4/difficulty_modifier)+0.5) {
+} else if(time == 4) {
     time = time + 0.5
     alert(`Its just after midnight, the moons hang nearly overhead.`)
-} else if(time == (5/difficulty_modifier)+0.5) {
+} else if(time == 5) {
     time = time + 0.
     alert(`Its late into the night, the moons hang over the western horizon. You should find shelter before the morning.`)
-} else if(time == (6/difficulty_modifier)+0.5) {
+} else if(time == 6) {
     time = time + 0.5
     alert(`Its very late into the night, the moons hang just above the western horizon. You should find shelter immediately.`)
 } else if(time > 7*difficulty_modifier && cover == false) {
@@ -360,11 +360,21 @@ if(time == 0.5) {
 }
 
 if(panic == 0.5) {
-
-} else if(panic == 6/difficulty_modifier+0.5) {
+    panic = panic + 0.5
+} else if(panic == 1.5) {
+    panic = panic + 0.5
+} else if(panic == 2.5) {
+    panic = panic + 0.5
+} else if(panic == 3.5) {
+    panic = panic + 0.5
+} else if(panic == 4.5) {
+    panic = panic + 0.5
+} else if(panic == 5.5) {
+    panic = panic + 0.5
+} else if(panic == 6.5) {
     panic = panic + 0.5
     alert(`You colapse into the snow, a high temperature warning blaring from your eyes as you gasp and struggle to your feet. You should find somewhere to relax ASAP.`)
-} else if(panic > 7/difficulty_modifier) {
+} else if(panic > 7) {
     alert(`You colapse into the snow, your limbs moving of their own accord, dragging you to a secluded place. Before long your steel chasis sprouts a pair of tattered wings and you soon  have a body count in the double digits.`)
     panic = 0
     start_choice()
