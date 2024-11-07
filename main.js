@@ -444,6 +444,7 @@ function two_digit() {
     let digit = randInt(10,99)
     if(digit == 0) {
         return 0
-    } else if()
+    } else if(Math.floor(digit/2) == digit/2 &&Math.floor(digit/3) == digit/3) {
+        return "Divisible by six."
+    }
 }
-
