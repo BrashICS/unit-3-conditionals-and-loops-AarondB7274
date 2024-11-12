@@ -35,8 +35,9 @@ Unit 3 - Conditionals & Loops
 - [3.2 - Else-If](./2%20-%20Else-If.md)
 - [3.3 - Else](./3%20-%20Else.md)
 - [3.4 - While](../2%20-%20Loops/4%20-%20While.md)
-- [3.5 - Do...While](../2%20-%20Loops/5%20-%20Do-While.md)
-- [3.6 - For](../2%20-%20Loops/6%20-%20For.md)
+- [3.5 - Interlude: `Strings`](../2%20-%20Loops/5%20-%20Interlude_Strings.md)
+- [3.6 - Do...While](../2%20-%20Loops/6%20-%20Do-While.md)
+- [3.7 - For](../2%20-%20Loops/7%20-%20For.md)
 
 </td></tr></table>
 

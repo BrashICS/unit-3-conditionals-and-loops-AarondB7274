@@ -28,8 +28,9 @@
 - [3.2 - Else-If](./2%20-%20Else-If.md)
 - [3.3 - Else](./3%20-%20Else.md)
 - [3.4 - While](../2%20-%20Loops/4%20-%20While.md)
-- [3.5 - Do...While](../2%20-%20Loops/5%20-%20Do-While.md)
-- [3.6 - For](../2%20-%20Loops/6%20-%20For.md)
+- [3.5 - Interlude: `Strings`](../2%20-%20Loops/5%20-%20Interlude_Strings.md)
+- [3.6 - Do...While](../2%20-%20Loops/6%20-%20Do-While.md)
+- [3.7 - For](../2%20-%20Loops/7%20-%20For.md)
 
 </td></tr></table>
 
@@ -93,6 +94,8 @@ This completes the <code>if-statement</code> package, creating a <b>powerful</b>
 
 ### Examples
 
+##### [Top ⬆](#33---else)
+
 1. You need a given value to be even and positive _or_ below zero:
 ```JS
 if ((value > 0) && (value % 2 == 0)) {
@@ -125,6 +128,8 @@ Do you understand the example above? Remember - `else if` is _optional_.
 
 ### A Note About `prompt()`
 
+##### [Top ⬆](#33---else)
+
 > Ever wonder what happens if the user clicks "Cancel" on a prompt?
 
 It actually returns `null`.
@@ -141,6 +146,8 @@ if (menu_selection == null) {
 
 ### Practice Time!
 
+##### [Top ⬆](#33---else)
+
 #### Part 1 - `is_number()`
 
 It can be really handy to have a function that tells you if a given value is a number or not. 
@@ -150,6 +157,8 @@ We can check that a value or variable is a real `'number'` by using `typeof`. Th
 Create the function `is_number(num)` that will return `true` if `num` is, in fact, a real number and `false` otherwise.
 
 #### Part 2 - Validate
+
+##### [Top ⬆](#33---else)
 
 Whenever a user interacts with our program(s), we need to validate that what they've done makes sense. This is particularly important if they're typing something in.
 
@@ -169,6 +178,8 @@ Here's how it will work:
 
 
 #### Part 3 - Guess!
+
+##### [Top ⬆](#33---else)
 
 In your [main.js](../../main.js) code file, you will see the `randInt()` function. It creates a random number from `min` to `max`.
 

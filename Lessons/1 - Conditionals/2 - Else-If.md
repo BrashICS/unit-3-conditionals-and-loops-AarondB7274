@@ -33,8 +33,9 @@ Unit 3 - Conditionals & Loops
 - [3.2 - Else-If](./2%20-%20Else-If.md)
 - [3.3 - Else](./3%20-%20Else.md)
 - [3.4 - While](../2%20-%20Loops/4%20-%20While.md)
-- [3.5 - Do...While](../2%20-%20Loops/5%20-%20Do-While.md)
-- [3.6 - For](../2%20-%20Loops/6%20-%20For.md)
+- [3.5 - Interlude: `Strings`](../2%20-%20Loops/5%20-%20Interlude_Strings.md)
+- [3.6 - Do...While](../2%20-%20Loops/6%20-%20Do-While.md)
+- [3.7 - For](../2%20-%20Loops/7%20-%20For.md)
 
 </td></tr></table>
 
@@ -81,6 +82,8 @@ The `else if` block(s) will *only* be checked if the condition above it was `fal
 
 ### Example:
 
+##### [Top ⬆](#32---else-if)
+
 Let's retry our colour selection again, using `else if`:
 ```JS
 let selection = prompt("Enter 1 for red, 2 for blue, 3 for green, 4 for purple")
@@ -101,6 +104,7 @@ In the code above, if the user enters "2", the code will check if it's equal to 
 
 ### Final Notes:
 
+
 - In case you missed it, to get the **_length_ of a String**, we  use `.length`<br>For Example:<br>
   ```JS
   let name = "Mr. Squirrel";
@@ -110,6 +114,7 @@ In the code above, if the user enters "2", the code will check if it's equal to 
 
 
 ## Practice Time!
+##### [Top ⬆](#32---else-if)
 
 ### Part 1 - Menu
 
@@ -159,10 +164,11 @@ Depending on what they select, output the following:
 
 ### Part 2 - AND and OR
 
+
 As mentioned in the previous lesson, you can combine _conditions_ with logical "AND" or "OR" operators. For example, to check if a number is between 5 and 10:
 ```JS
 if ((x >= 5) && (x <= 10)) {
-  // Do something
+    // Do something
 }
 ```
 
@@ -175,6 +181,8 @@ In that example, it is checking if the value is greater than or equal to 5 **and
 3. Depending on the value of `hour`, _return_ "Good morning!" (hour is 0-11), "Good afternoon!" (hour is 12-17), or "Good evening!" (hour is 18-23). If the hour is _any other value_, return "Invalid hour!".
 
 ### Here's another _optional_ challenge:
+
+##### [Top ⬆](#32---else-if)
 
 **Reminder:** Inside your [main.js](../../main.js) file is the `randInt()` function.
 

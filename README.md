@@ -27,8 +27,9 @@ Repeating a section of code is called a **_loop_**. The code goes back to a cert
 #### Lessons:
 
 4. [The While Loop](./Lessons/2%20-%20Loops/4%20-%20While.md)
-5. [The Do-While Loop](./Lessons/2%20-%20Loops/5%20-%20Do-While.md)
-6. [The For-Loop](./Lessons/2%20-%20Loops/6%20-%20For.md)
+5. [Interlude: `Strings`](./Lessons/2%20-%20Loops/5%20-%20Interlude_Strings.md)
+6. [The Do-While Loop](./Lessons/2%20-%20Loops/6%20-%20Do-While.md)
+7. [The For-Loop](./Lessons/2%20-%20Loops/7%20-%20For.md)
 
 ---
 
