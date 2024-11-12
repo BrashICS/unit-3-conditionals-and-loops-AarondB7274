@@ -448,3 +448,38 @@ function two_digit() {
         return "Divisible by six."
     }
 }
+
+function countdown(start, stop) {
+    let loop = 0
+    while (start >= stop) {
+        console.log(start)
+        loop++
+        start--
+    }
+    console.log(`Go!`)
+    return loop
+}
+
+function random_until(min, max, stop) {
+    if (max >! min) {
+    if (stop >= min && stop <= max) {
+        let rand = randInt(min, max)
+       while (rand != stop) {
+        rand = randInt(min, max)
+        console.log(rand)
+       }
+       return stop
+    } else {
+        return -1
+    }
+    } else {
+        return -1
+    }
+}
+
+function average(n) {
+    let loop = 1
+    while (loop > n) {
+        let num = prompt(`Enter a value ${loop}/${n}`)
+    }
+}
