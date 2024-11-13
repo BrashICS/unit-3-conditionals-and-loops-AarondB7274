@@ -485,3 +485,27 @@ function average(n) {
     console.log(`The average is ${total}`)
 }
 
+function print_reverse(str) {
+    let loop = str.length
+    let str_sec = ""
+    while (loop > 0) {
+        str_sec += str[loop-1]
+        loop--
+    }
+    console.log(str_sec)
+}
+
+function dragons_and_goblins(str) {
+    let dragons = 0
+    let goblins = 0
+    let loop = str.length
+    while (loop > 0) {
+        if (str[loop-1] == d) {
+            dragons++
+        } else if (str[loop-1] == g) {
+            goblins++
+        }
+        loop--
+    }
+    console.log(`You passed ${dragons} dragons and ${goblins} goblins!`)
+}
