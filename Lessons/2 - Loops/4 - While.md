@@ -31,8 +31,8 @@
 - [3.3 - Else](../1%20-%20Conditionals/3%20-%20Else.md)
 - [3.4 - While](./4%20-%20While.md)
 - [3.5 - Interlude: `Strings`](./5%20-%20Interlude_Strings.md)
-- [3.5 - Do...While](./6%20-%20Do-While.md)
-- [3.6 - For](./7%20-%20For.md)
+- [3.6 - Do...While](./6%20-%20Do-While.md)
+- [3.7 - For](./7%20-%20For.md)
 
 </td></tr></table>
 
