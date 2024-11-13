@@ -151,8 +151,8 @@ function forest() {
 function forest_stand() {
         alert(`You stand your ground. The noises continue for quite some time, often punctuated with screams. A winged figure is launched above the canopy in the distance, and the forest goes silent as another follows.`)
         forest_second()
-        time = time + 0.5
-        panic = panic + 0.5
+        time += 0.5
+        panic += 0.5
         return time, panic
 }
 
@@ -160,7 +160,7 @@ function forest_hide() {
         panic = 0
         if(time < 8)alert(`You hide in the undergrowth. The noises continue for quite some time, often punctuated with screams. The forest soon goes silent but you stay hidden longer out of fear, when you come out the moons have falled behind the trees.`)
         forest_second()
-        time = time + 1.5
+        time += 1.5
         return time
 }
 
@@ -180,7 +180,7 @@ function forest_second() {
     if(choice == 1) {
         forest_continue()
         return
-    } else if(third_choice == 2) {
+    } else if(choice == 2) {
         leave()
         return
     } else {
@@ -217,11 +217,11 @@ function sea() {
 function sea_stare() {
     alert(`You stare out across the frozen sea. You stay for quite some time, when you rise the figures have gone and the moons have gone below the horizon.`)
     sea_second()
-    time = time + 1.5
+    time += 1.5
     if(panic > 1) {
-        panic = panic - 2
+        panic -= 2
     } else if(panic > 0) {
-        pnic = panic - 1
+        panic-- 
     }
     return time, panic
 }
@@ -229,9 +229,9 @@ function sea_stare() {
 function sea_watch() {
     alert(`You watch the figures frolic in the sky. They zip around the clouds, decending with incredible speed before ascending again.`)
     sea_second()
-    time = time + 0.5
+    time += 0.5
     if(panic > 0) {
-        panic = panic - 1
+        panic--
     }
     return time
 }
@@ -239,7 +239,7 @@ function sea_watch() {
 function leave() {
     alert(`There wasn't anything that intrested you here anyways. You head back to the feild where you woke up.`)
     start_choice()
-    time = time + 0.5
+    time += 0.5
     return time
 }
 
@@ -263,7 +263,7 @@ function sea_second() {
 
 function sea_wait() {
     alert(`You stare you over the frozen waters. Its surface is perfectly smooth and still, not even a wave, frozen in time to be seen.`)
-    time = time + 0.5
+    time += 0.5
     return time
 }
 
@@ -329,50 +329,50 @@ function exit() {
 }
 
 if(time == 0.5) {
-    time = time + 0.5
+    time += 0.5
     alert(`Its very early into the night, the moons have just risen above the eastern horizon.`)
 } else if(time == 1) {
-    time = time + 0.5
+    time += 0.5
     alert(`Its early into the night, the moons hover just above the eastern horizon.`)
 } else if(time == 2) {
-    time = time + 0.5
+    time += 0.5
     alert(`Its just before midnight, the moons hang overhead.`)
 } else if(time == 3) {
-    time = time + 0.5
+    time += 0.5
     alert(`Its midnight, the moons hang directly above you in the sky.`)
 } else if(time == 4) {
-    time = time + 0.5
+    time += 0.5
     alert(`Its just after midnight, the moons hang nearly overhead.`)
 } else if(time == 5) {
-    time = time + 0.
+    time += 0.5
     alert(`Its late into the night, the moons hang over the western horizon. You should find shelter before the morning.`)
 } else if(time == 6) {
-    time = time + 0.5
+    time += 0.5
     alert(`Its very late into the night, the moons hang just above the western horizon. You should find shelter immediately.`)
-} else if(time > 7*difficulty_modifier && cover == false) {
+} else if(time > 7 && cover == false) {
     alert(`The sun comes up over the horizon, its sickly yellow glare burning your skin. The smell of burning metal perforates the air around you as you are involitarily incinerated.`)
     start_choice()
     time = 0
-} else if(time > 7*difficulty_modifier && cover == true) {
+} else if(time > 7 && cover == true) {
     alert(`The sun comes up over the horizon, its sickly yellow glare casting an orange hue over the outside world. Your hiding place protects you from it. Nothing will come after you in the day, but you won't be able to go anywhere either.`)
-    loop = loop + 1
+    loop++
     time = 0
 }
 
 if(panic == 0.5) {
-    panic = panic + 0.5
+    panic += 0.5
 } else if(panic == 1.5) {
-    panic = panic + 0.5
+    panic += 0.5
 } else if(panic == 2.5) {
-    panic = panic + 0.5
+    panic += 0.5
 } else if(panic == 3.5) {
-    panic = panic + 0.5
+    panic += 0.5
 } else if(panic == 4.5) {
-    panic = panic + 0.5
+    panic += 0.5
 } else if(panic == 5.5) {
-    panic = panic + 0.5
+    panic += 0.5
 } else if(panic == 6.5) {
-    panic = panic + 0.5
+    panic += 0.5
     alert(`You colapse into the snow, a high temperature warning blaring from your eyes as you gasp and struggle to your feet. You should find somewhere to relax ASAP.`)
 } else if(panic > 7) {
     alert(`You colapse into the snow, your limbs moving of their own accord, dragging you to a secluded place. Before long your steel chasis sprouts a pair of tattered wings and you soon  have a body count in the double digits.`)
@@ -461,25 +461,27 @@ function countdown(start, stop) {
 }
 
 function random_until(min, max, stop) {
-    if (max >! min) {
-    if (stop >= min && stop <= max) {
-        let rand = randInt(min, max)
-       while (rand != stop) {
-        rand = randInt(min, max)
-        console.log(rand)
+    if (stop < min || stop > max || max <= min) {
+        return -1
+    }
+    let rnd = randInt(min, max)
+        while (rnd != stop) {
+        console.log(rnd)
+        rnd = randInt(min, max)
        }
        return stop
-    } else {
-        return -1
-    }
-    } else {
-        return -1
-    }
 }
 
 function average(n) {
-    let loop = 1
-    while (loop > n) {
-        let num = prompt(`Enter a value ${loop}/${n}`)
+    let loop = 0
+    let total = 0
+    while (loop < n) {
+        loop++
+        let num = +prompt(`Enter a value ${loop}/${n}`)
+        total += num
+        console.log(`Value #${loop}: ${num}`)
     }
+    total = round(total/n, 1)
+    console.log(`The average is ${total}`)
 }
+
