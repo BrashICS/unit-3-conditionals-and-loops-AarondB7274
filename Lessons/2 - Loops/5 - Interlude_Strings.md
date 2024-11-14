@@ -193,6 +193,34 @@ Try creating the following functions:
   -10
   ```
 
+## Extra Practice
+
+Don't like the above tasks or maybe they were too easy? Here's a few more to try:
+
+- `substring(mainstring, start, stop)`  
+  - The `substring()` function extracts characters from start to end (exclusive) from the `mainstring` String.
+  - The `substring()` function does not change the original String.
+  - If `start` is greater than `stop`, arguments are swapped: (4, 1) = (1, 4).
+  - `start` or `stop` values less than 0, are treated as 0.  
+
+  **Example:**
+  ```JS
+  let sub = substring("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 6, 11);
+  // sub == "GHIJK"
+  ```
+- `fix_pronoun(str)`  
+Pronouns are supposed to start with a single capital letter and be followed with all lowercase letters (with some exceptions but we'll ignore the exceptions for this).
+  - The `fix_pronoun(str)` function will _assume_ the provided string is a single word.
+  - This function returns the given string with the first letter capitalized (uppercase) and all other letters lowercase.  
+
+  **Examples:**
+  ```JS
+  console.log(fix_pronoun("gabriel"));
+  "Gabriel"
+
+  console.log(fix_pronoun("HAM SanDWiCh!"));
+  "Ham sandwich!"
+  ```
 
 <br><br>
 🐿️
