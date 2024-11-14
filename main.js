@@ -32,7 +32,7 @@ function randInt(min, max) {
 
 let panic = 0
 let time = 0
-let loop = 0
+let day = 0
 let cover = false
 let difficulty_modifier = 1
 
@@ -53,6 +53,7 @@ function menu() {
         alert(`Have a great day, don't die out there!`)
     }
 }
+
 function start_game() {
     let choice = prompt(`Do you want to:
         (1) - Start a new game
@@ -355,7 +356,7 @@ if(time == 0.5) {
     time = 0
 } else if(time > 7 && cover == true) {
     alert(`The sun comes up over the horizon, its sickly yellow glare casting an orange hue over the outside world. Your hiding place protects you from it. Nothing will come after you in the day, but you won't be able to go anywhere either.`)
-    loop++
+    day++
     time = 0
 }
 
@@ -379,7 +380,6 @@ if(panic == 0.5) {
     panic = 0
     start_choice()
 }
-
 
 function user() {
     let user_age = +prompt(`How old are you?`)
@@ -510,4 +510,58 @@ function dragons_and_goblins(str) {
     console.log(`You passed ${dragons} dragons and ${goblins} goblins!`)
 }
 
-function 
+function add(str) {
+    let num = 0
+    let loop = 0
+    while (loop < str.length) {
+        num += +str[loop]
+        loop++
+    }
+    return num
+}
+
+function add_subtract(str) {
+    let num = 0
+    let loop = 0
+    while (loop < str.length) {
+        if(str[loop] == "-") {
+            num -= +str[loop+1]
+            loop += 2
+        } else {
+            num += +str[loop]
+            loop++
+        }
+    }
+    return num
+}
+
+function substring(mainstring, start, stop) {
+    let sub = ""
+    if (start > stop) {
+        let holster = stop
+        stop = start
+        start = holster
+    }
+    if (start < 0) {
+        start = 0
+    }
+    if (stop < 0) {
+        stop = 0
+    }
+    while (start < stop) {
+        sub += mainstring[start]
+        start++
+    }
+    return sub
+}
+
+function fix_pronoun(str) {
+    str = str.toLowerCase()
+    let loop = 0
+    let fixed = str[loop].toUpperCase()
+    while (loop < str.length) {
+        loop++
+        fixed += str[loop]
+    }
+    return fixed
+}
