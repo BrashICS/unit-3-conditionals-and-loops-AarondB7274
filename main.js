@@ -500,12 +500,14 @@ function dragons_and_goblins(str) {
     let goblins = 0
     let loop = str.length
     while (loop > 0) {
-        if (str[loop-1] == d) {
+        if (str[loop-1] == "d") {
             dragons++
-        } else if (str[loop-1] == g) {
+        } else if (str[loop-1] == "g") {
             goblins++
         }
         loop--
     }
     console.log(`You passed ${dragons} dragons and ${goblins} goblins!`)
 }
+
+function 
