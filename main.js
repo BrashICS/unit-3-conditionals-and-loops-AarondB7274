@@ -557,12 +557,30 @@ function substring(mainstring, start, stop) {
 
 function fix_pronoun(str) {
     str = str.toLowerCase()
-    let loop = 0
-    let fixed = str[loop].toUpperCase()
-    loop++
+    let loop = 1
+    let fixed = str[0].toUpperCase()
     while (loop < str.length) {
         fixed += str[loop]
         loop++
     }
     return fixed
+}
+
+// this one's broken
+function print_odd(n) {
+    let loop = 1
+    if(isNaN(n) = false && n > 1) {
+        do {
+            console.log(loop)
+            loop += 2
+        } while (loop > n)
+    }
+    return
+}
+
+function negative_only() {
+    let input
+    do {
+        input = +prompt(`Gimme a negative number!`)
+    } while (%input == 0)
 }
