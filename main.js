@@ -559,9 +559,10 @@ function fix_pronoun(str) {
     str = str.toLowerCase()
     let loop = 0
     let fixed = str[loop].toUpperCase()
+    loop++
     while (loop < str.length) {
-        loop++
         fixed += str[loop]
+        loop++
     }
     return fixed
 }
