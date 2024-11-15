@@ -34,7 +34,6 @@ let panic = 0
 let time = 0
 let day = 0
 let cover = false
-let difficulty_modifier = 1
 
 function menu() {
     alert(`Welcome to a slightly spooky (and *really* mentaly ill) little game! I've put a lot of work into this, so I hope you enjoy!`)
@@ -50,7 +49,7 @@ function menu() {
     } else if(choice == 3) {
         extra_content()
     } else if(choice == 4) {
-        alert(`Have a great day, don't die out there!`)
+        exit()
     }
 }
 
@@ -94,6 +93,11 @@ function new_game() {
 function load_game() {
     alert(`Saved games coming soon!`)
     start_game()
+}
+
+function extra_content() {
+    alert(`All up to date! Not that I know how to check that, or even update this!`)
+    menu()
 }
 
 function start_choice() {
@@ -325,7 +329,7 @@ function ruins_spire_enter() {
 }
 
 function exit() {
-    alert(`Goodbye! Play again sometime, won't you?`)
+    alert(`Have a great day (or night)! Don't die out there!`)
     return
 }
 
@@ -566,21 +570,42 @@ function fix_pronoun(str) {
     return fixed
 }
 
-// this one's broken
+// this one is broken, idk why but it is
 function print_odd(n) {
-    let loop = 1
-    if(isNaN(n) = false && n > 1) {
+    if ((isNaN[n]) = false && n > 1) {
+        let loop = 1
         do {
             console.log(loop)
             loop += 2
         } while (loop > n)
     }
-    return
+    return n
 }
 
 function negative_only() {
     let input
     do {
         input = +prompt(`Gimme a negative number!`)
-    } while (%input == 0)
+    } while (input > 0)
+    return input
+}
+
+function parrot() {
+    let input = ""
+    do {
+        input = prompt(`Enter any variant of "quit"`)
+        console.log(`${input.toUpperCase()}`)
+    } while (input.toLowerCase() != "quit")
+    console.log(`GOODBYE!`)
+}
+
+// ok, so js doesn't like my n variable, again.
+function factorial(n) {
+    let loop = 0
+    let output = 0
+    do {
+        output *= (n-loop)
+        loop++
+    } while (loop < n)
+    console.log(output)
 }
