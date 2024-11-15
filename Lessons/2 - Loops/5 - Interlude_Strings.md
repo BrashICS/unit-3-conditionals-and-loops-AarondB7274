@@ -125,6 +125,7 @@ function duplicate(str, number_of_times) {
 
   while (n <= number_of_times) {
     output += str;
+    n++;
   }
 
   return output;
