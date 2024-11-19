@@ -137,17 +137,17 @@ Now it's your turn to practice. The list of functions below is in _no particular
 Given some number, `n`, as a parameter to the function, print the _odd_ numbers from 1 to `n`. If `n` is less than 1 or _not a number_, nothing should print.  
 **For Example:**
 ```JS
-printOdd(7);
+print_odd(7);
 // Prints:
 1
 3
 5
 7
 
-printOdd(-7);
+print_odd(-7);
 // Nothing is printed
 
-printOdd("s'up?");
+print_odd("s'up?");
 // Nothing is printed
 ```
 
@@ -168,13 +168,13 @@ Prompt the user to enter some text _or_ the word 'quit'.
   ```text
   parrot();
   
-  [prompt]"Please some text or the word 'quit' to exit:" Hello!
+  [prompt]"Please enter some text or the word 'quit' to exit:" Hello!
   HELLO!
 
-  [prompt]"Please some text or the word 'quit' to exit:" I wish to quit
+  [prompt]"Please enter some text or the word 'quit' to exit:" I wish to quit
   I WISH TO QUIT
 
-  [prompt]"Please some text or the word 'quit' to exit:" QuIt
+  [prompt]"Please enter some text or the word 'quit' to exit:" QuIt
   GOODBYE! 🦜
   ```
 
