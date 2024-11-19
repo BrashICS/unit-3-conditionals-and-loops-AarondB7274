@@ -295,7 +295,7 @@ function sum(n) {
 function count4(start,stop) {
     let output = 0
     for (let i = start; i < stop+1; i++) {
-        if (Math.round(i/4) == i/4) {
+        if (i % 4 == 0) {
             output++
         }
     }
@@ -305,7 +305,7 @@ function count4(start,stop) {
 function sum_divisible(n,x) {
     let output = 0
     for (let i = 0; i < n+1; i++) {
-        if (Math.round(i/x) == i/x) {
+        if (i % x == 0) {
             output += i
         }
     }
