@@ -30,6 +30,8 @@ function randInt(min, max) {
 
 // For "equal to" use == , for "and" use && , for  "or" use ||
 
+// If loop time!
+
 function user() {
     let user_age = +prompt(`How old are you?`)
     if(user_age >= 60) {
@@ -97,6 +99,8 @@ function two_digit() {
         return "Divisible by six."
     }
 }
+
+// While loop time!
 
 function countdown(start, stop) {
     let loop = 0
@@ -215,6 +219,8 @@ function fix_pronoun(str) {
     return fixed
 }
 
+// Do-while loop time!
+
 // this one is broken, idk why but it is
 function print_odd(n) {
     if ((isNaN[n]) = false && n > 1) {
@@ -249,9 +255,59 @@ function factorial(n) {
     let loop = 0
     let output = 0
     do {
-        output = output*(n-loop)
+        output = output*loop
         loop++
-    } while (loop < n)
+    } while (loop <= n)
     console.log(output)
     return
+}
+
+// For-loop time!
+
+function count_up(start, stop) {
+    for (let i = start; i < stop; i++) {
+        console.log(i)
+    }
+    console.log(stop)
+}
+
+function count_down(start, stop) {
+    for (let i = start; i > stop; i--) {
+        console.log(i)
+    }
+    console.log(stop)
+}
+
+function print_chars(str, step) {
+    for (let i = 0; i < str.length; i += step) {
+        console.log(str[i])
+    }
+}
+
+function sum(n) {
+    let num = 0
+    for (let i = 0; i < n+1; i++) {
+        num += i
+    }
+    return num
+}
+
+function count4(start,stop) {
+    let output = 0
+    for (let i = start; i < stop+1; i++) {
+        if (Math.round(i/4) == i/4) {
+            output++
+        }
+    }
+    return output
+}
+
+function sum_divisible(n,x) {
+    let output = 0
+    for (let i = 0; i < n+1; i++) {
+        if (Math.round(i/x) == i/x) {
+            output += i
+        }
+    }
+    return output
 }
