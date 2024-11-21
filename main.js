@@ -308,3 +308,11 @@ function sum_divisible(n,x) {
     }
     return output
 }
+
+// more practice! Man I love coding, this is fun!
+
+function count_char(str,char) {
+    for(let i = 0; i <= str.length; i++) {
+        //
+    }
+}
