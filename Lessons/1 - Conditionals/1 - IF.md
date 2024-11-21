@@ -4,15 +4,42 @@
 
 ##### ICS3 - Mr. Brash 🐿️
 
-Table of Contents:
-- [Lesson & Syntax](#lesson)
-- [Examples](#examples)
-- [Logical Operators](#logical-operators)
-- [Practice](#practice-time)
-    - [Part 1](#part-1)
-    - [Part 2](#part-2)
-    - [Part 3](#part-3)
-    - [Part 4](#part-4)
+<table>
+<tr>
+<th>
+3.1 - In this Lesson:
+</th>
+<th>
+Unit 3 - Conditionals & Loops
+</th>
+</tr>
+<tr>
+<td td valign="top" style="height: 100px;padding-right:50px">
+<ul>
+<li><a href="#lesson">If-Statement Syntax</a></li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#logical-operators">Logical Operators</a></li>
+<li><a href="#practice-time">Practice Time!</a></li>
+<ul>
+<li><a href="#part-1">Part 1</a></li>
+<li><a href="#part-2">Part 2</a></li>
+<li><a href="#part-3">Part 3</a></li>
+<li><a href="#part-4">Part 4</a></li>
+</ul>
+</ul>
+</td>
+<td td valign="top" style="height: 100px;padding-right:50px">
+
+- [README](../../README.md)
+- [3.1 - If](./1%20-%20IF.md)
+- [3.2 - Else-If](./2%20-%20Else-If.md)
+- [3.3 - Else](./3%20-%20Else.md)
+- [3.4 - While](../2%20-%20Loops/4%20-%20While.md)
+- [3.5 - Interlude: `Strings`](../2%20-%20Loops/5%20-%20Interlude_Strings.md)
+- [3.6 - Do...While](../2%20-%20Loops/6%20-%20Do-While.md)
+- [3.7 - For](../2%20-%20Loops/7%20-%20For.md)
+
+</td></tr></table>
 
 ---
 
@@ -43,6 +70,8 @@ if (condition_is_true) {
 
 ### Examples:
 
+##### [Top ⬆](#31-if-statements)
+
 ```JS
 /* 
 A function that takes two numbers and if they are negatives of each other, return "Negatives", if they aren't return "Not Negatives"
@@ -65,7 +94,7 @@ function check_game(game_running, lives) {
         display("Game Over!");
 
         // Stop the game
-        game_running == false;
+        game_running = false;
 
         // Return -1 because the game is over
         return -1;
@@ -87,6 +116,8 @@ function snow_day(snow, temperature, buses_running) {
 ```
 
 ### Logical Operators
+
+##### [Top ⬆](#31-if-statements)
 
 Did you see the **double**-equal sign? `==`
 
@@ -111,6 +142,8 @@ Use the [main.js](../../main.js) file to write your code.
 
 ### Part 1
 
+##### [Top ⬆](#31-if-statements)
+
 This will all be one function, run from the dev console:
 
 - Create the function `user()` that takes _no_ parameters but does the following:  
@@ -125,7 +158,7 @@ This will all be one function, run from the dev console:
     - Now ask the user for their **name** and store the answer in a variable called `user_name`
     - if the `user_name` is "Mr. Squirrel" print the squirrel emoji: "🐿️"
     - if the `user_name` is longer than 7 characters print "You have a long name."
-        - **You can read how to get the length of a string [here](https://www.w3schools.com/jsref/jsref_length_string.asp)**.
+        - **You can read how to get the length of a string [here](https://flexiple.com/javascript/javascript-string-length)**.
 
     - Now ask the user how long they think their name is (how many characters)
     - If the number they enter **matches** the length of `user_name` print "That's correct! ✔️"
@@ -134,6 +167,9 @@ This will all be one function, run from the dev console:
 
 
 ### Part 2:
+
+##### [Top ⬆](#31-if-statements)
+
 We've seen the basic math operators `+`, `-`, `*`, `/` but there are more. One **important** one is the *modulo* operator `%`. This gives the *remainder* of a division statement.
 
 **For Example:**
@@ -155,12 +191,16 @@ For Example:  "Your age is an even number."  or  "Your age is an odd number."
 
 ### Part 3:
 
+##### [Top ⬆](#31-if-statements)
+
 Create the function `longer_string(str1, str2)` which _returns the longer of the two strings_.  
 **For example:**  `longer_string("Happy", "Birthday")` returns "Birthday"
 
 > 🤔 What should you return if they're both the same length?
 
 ### Part 4:
+
+##### [Top ⬆](#31-if-statements)
 
 Create the function `discriminant(a, b, c)` which _returns how many zeros the quadratic will have based on the values of `a`, `b`, and `c`_. This requires your knowledge of [the descriminant](https://www.khanacademy.org/math/algebra-home/alg-quadratics/alg-solving-quadratics-using-the-quadratic-formula/a/discriminant-review) from grade 10 math.
 

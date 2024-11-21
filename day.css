@@ -1,11 +1,5 @@
-/*
-  style.css 
-  Feel free to change this CSS for your own purposes
-*/
-
-/* Using font-size: larger to make things pop. Feel free to change. */
 body {
-    background-image:linear-gradient(darkslateblue, black);
+    background-image:linear-gradient(goldenrod, black);
     color: white;
     margin: 30px;
     font-size: x-large;
@@ -29,11 +23,6 @@ h3 {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-p {
+p, ul, li {
     color:silver;
-}
-
-button, input {
-    color:darkslateblue;
-    background-color: silver;
 }
