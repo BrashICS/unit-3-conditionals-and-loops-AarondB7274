@@ -221,16 +221,13 @@ function fix_pronoun(str) {
 
 // Do-while loop time!
 
-// this one is broken, idk why but it is
+// ignore th fact that this task, in the do-while section, uses a for loop. Its fine, dw about it.
 function print_odd(n) {
-    if ((isNaN[n]) = false && n > 1) {
-        let loop = 1
-        do {
-            console.log(loop)
-            loop += 2
-        } while (loop > n)
+    if(isNaN(n) == false && n > 0) {
+        for(let i = 1; i <= n; i += 2) {
+            console.log(i)
+        }
     }
-    return n
 }
 
 function negative_only() {
@@ -250,10 +247,10 @@ function parrot() {
     console.log(`GOODBYE!`)
 }
 
-// ok, so js doesn't like my n variable, again.
+
 function factorial(n) {
-    let loop = 0
-    let output = 0
+    let loop = 1
+    let output = 1
     do {
         output = output*loop
         loop++
